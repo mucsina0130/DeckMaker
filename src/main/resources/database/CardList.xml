@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<cardlist>
+	<card>
+		<name>sd</name>
+		<cost>sd22</cost>
+		<attribute>asda</attribute>
+		<type>asdasd</type>
+		<cardtype>asdasssd</cardtype>
+		<description>sjgjghfdhdhj</description>
+		<attpower>22</attpower>
+		<deffpower>11</deffpower>
+	</card>	
+	<card>
+		<name>ag</name>
+		<cost>afad34</cost>
+		<attribute>dssd</attribute>
+		<type>dfgafg</type>
+		<cardtype>adfgafg</cardtype>
+		<description>adgafga</description>
+		<attpower>111</attpower>
+		<deffpower>4444</deffpower>
+	</card>	
+
+</cardlist>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rules>
+	<mindecksize>30</mindecksize>
+	<maxdecksize>60</maxdecksize>
+	<basic_quantity_restriction>3</basic_quantity_restriction>
+	<cardrestrictions>
+		<restriction>
+			<name>sd</name>
+			<maxnumber_of_piece>2</maxnumber_of_piece>
+		</restriction>
+        </cardrestrictions>
+
+</rules>
