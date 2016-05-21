@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -24,10 +25,13 @@ import org.xml.sax.SAXException;
  * @author mucsi
  */
 public class CardDAOImpl implements CardDAO{
+    
+    private static org.slf4j.Logger logger = LoggerFactory.getLogger(CardDAOImpl.class);
 
     @Override
     public void CardListLoader(CardList cardlist) {
         try {
+            logger.warn("ValidityRules.xml must not be null!");
             InputStream is = this.getClass().getClassLoader().getResourceAsStream("database/CardList.xml");
             DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
             DocumentBuilder builder=factory.newDocumentBuilder();
@@ -51,11 +55,11 @@ public class CardDAOImpl implements CardDAO{
                     card.setAttpower(Integer.parseInt(elem.getElementsByTagName("attpower").item(0).getTextContent()));
                     card.setDeffpower(Integer.parseInt(elem.getElementsByTagName("deffpower").item(0).getTextContent()));
                     cardlist.getCards().add(card);
-                    
+                    logger.info("Card loaded:",card.getName());
                 }
             }
         } catch (ParserConfigurationException | SAXException | IOException ex) {
-            Logger.getLogger(CardDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            logger.error("Exception caught", ex);
         } 
     }
 

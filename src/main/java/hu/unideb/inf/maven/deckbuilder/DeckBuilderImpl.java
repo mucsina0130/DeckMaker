@@ -7,17 +7,19 @@ package hu.unideb.inf.maven.deckbuilder;
 
 import hu.unideb.inf.maven.deckbuilder.DeckBuilder;
 import hu.unideb.inf.maven.deckmaker.Card;
+import hu.unideb.inf.maven.deckmaker.CardDAOImpl;
 import hu.unideb.inf.maven.deckmaker.Deck;
 import hu.unideb.inf.maven.deckmaker.Restriction;
 import hu.unideb.inf.maven.deckmaker.ValidityRules;
 import java.util.stream.Collectors;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author mucsi
  */
 public class DeckBuilderImpl implements DeckBuilder{
-
+    private static org.slf4j.Logger logger = LoggerFactory.getLogger(CardDAOImpl.class);
     @Override
     public boolean addNewCardValidate(Deck<Card> deck, Card newcard, ValidityRules<Restriction> validity) {
        boolean flag=true;
@@ -29,6 +31,7 @@ public class DeckBuilderImpl implements DeckBuilder{
             {
                 restr=validity.getRestrictions().get(j);
                 isrestricted=true;
+                logger.info("Card is restricted:",restr.getMaxnumber_of_piece());
             }
         }
 
@@ -71,8 +74,14 @@ public class DeckBuilderImpl implements DeckBuilder{
             quantity+=deck.getDeck().get(i).getQuantity();
         }
         if(quantity<minquantity.getMindecksize())
+        {
+            logger.info("Too little card in the deck!");
             return false;
-        else return true;
+        }
+        else {
+            logger.info("Enought card in the deck!");
+            return true;
+        }
     }
 
     @Override
@@ -83,8 +92,14 @@ public class DeckBuilderImpl implements DeckBuilder{
             quantity+=deck.getDeck().get(j).getQuantity();
         }
         if(quantity+i>maxquantity.getMaxdecksize())
+        {
+            logger.info("Too much card in the deck!");
             return false;
-        else return true;
+        }
+        else {
+            logger.info("Still has some space in the deck!");
+            return true;
+        }
     }
 
     @Override
@@ -105,6 +120,7 @@ public class DeckBuilderImpl implements DeckBuilder{
                     deck.setDeckquantity((int) (deck.getDeckquantity()+1));
                     //System.out.println("Deck quantity: " + deck.getDeckquantity());
                     deck.getDeck().get(i).setQuantity((int) (deck.getDeck().get(i).getQuantity()+1));
+                    logger.info("Card added to deck:",deck.getDeck().get(i).getName());
                     return deck;     
                }
                else
@@ -113,6 +129,7 @@ public class DeckBuilderImpl implements DeckBuilder{
                    deck.getDeck().get(deck.getDeck().size()-1).setQuantity(1);
                    deck.setDeckquantity((int) (deck.getDeckquantity()+1));
                    //System.out.println("Deck quantity: " + deck.getDeckquantity());
+                   logger.info("Card added to deck:",deck.getDeck().get(i).getName());
                    return deck;
                }
 
@@ -121,6 +138,7 @@ public class DeckBuilderImpl implements DeckBuilder{
     @Override
     public Deck deleteCardFromDeck(Deck<Card> deck, Card newcard) {
         int i=0;
+        String name = newcard.getName();
         boolean cardindeck=false;
         for(i=0;i<deck.getDeck().size();i++)
                {
@@ -144,7 +162,7 @@ public class DeckBuilderImpl implements DeckBuilder{
                    }
                          
                }
-               
+        logger.info("Card removed from deck:",name);
                return deck;
     }
     

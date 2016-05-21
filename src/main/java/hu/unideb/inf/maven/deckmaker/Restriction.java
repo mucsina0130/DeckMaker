@@ -1,41 +1,72 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hu.unideb.inf.maven.deckmaker;
 
 import java.util.Objects;
 
 /**
- *
- * @author mucsi
+ * Class for representing the rules for building a deck.
  */
 public class Restriction {
+
+    /**
+     * The name of the object.
+     */
     private String name;
+    /**
+     * The maximum number of pieces of this object.
+     */
     private double maxnumber_of_piece;
+
+    /**
+     * Constructs a default {@code Restriction} object.
+     */
+    public Restriction() {
+    }
+
+    ;
     
-    
-    public Restriction(){};
-    
-    
+    /**
+     * Construct a {@code Restriction} object with a name and a maximum number of pieces specified.
+     * 
+     * @param name the name of the object
+     * @param maxnumber_of_piece the maximum number of pieces of this object
+     */
     public Restriction(String name, double maxnumber_of_piece) {
         this.name = name;
         this.maxnumber_of_piece = maxnumber_of_piece;
     }
 
+    /**
+     * Returns the name of this object.
+     *
+     * @return the name of this object
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Returns maximum number of pieces of this object.
+     *
+     * @return maximum number of pieces of this object
+     */
     public double getMaxnumber_of_piece() {
         return maxnumber_of_piece;
     }
 
+    /**
+     * Sets the name of this object.
+     *
+     * @param name the name of this object
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Sets the maximum number of pieces of this object.
+     *
+     * @param maxnumber_of_piece the maximum number of pieces of this object
+     */
     public void setMaxnumber_of_piece(double maxnumber_of_piece) {
         this.maxnumber_of_piece = maxnumber_of_piece;
     }
@@ -73,5 +104,5 @@ public class Restriction {
     public String toString() {
         return "Restriction{" + "name=" + name + ", maxnumber_of_piece=" + maxnumber_of_piece + '}';
     }
-    
+
 }

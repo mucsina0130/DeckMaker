@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -24,9 +25,12 @@ import org.xml.sax.SAXException;
  * @author mucsi
  */
 public class ValidityRulesImplDAO implements ValidityRulesDAO{
+    private static org.slf4j.Logger logger = LoggerFactory.getLogger(CardDAOImpl.class);
+    
     @Override
     public void RestrictionsLoader(ValidityRules rules) {
         try {
+            logger.warn("ValidityRules.xml must not be null!");
             InputStream is = this.getClass().getClassLoader().getResourceAsStream("database/ValidityRules.xml");
             DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
             DocumentBuilder builder=factory.newDocumentBuilder();
@@ -52,11 +56,12 @@ public class ValidityRulesImplDAO implements ValidityRulesDAO{
                     Element elem = (Element) node;
                 Restriction restriction = new Restriction(elem.getElementsByTagName("name").item(0).getTextContent(), Double.parseDouble(elem.getElementsByTagName("maxnumber_of_piece").item(0).getTextContent()));
                 rules.getRestrictions().add(restriction);
+                logger.info("Restriction loaded:",restriction.getName());
                 }
             }
             
         } catch (ParserConfigurationException | SAXException | IOException ex) {
-            Logger.getLogger(CardDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            logger.error("Exception caught", ex);
         }
     }
     

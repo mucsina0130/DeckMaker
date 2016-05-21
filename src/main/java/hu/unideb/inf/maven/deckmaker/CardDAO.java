@@ -1,18 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hu.unideb.inf.maven.deckmaker;
 
 /**
- *
- * @author mucsi
+ * This interface method will load data from an xml file.
  */
 public interface CardDAO {
-    
+
+    /**
+     * This method will sets up the {@code CardList} object from an xml file.
+     *
+     * @param cardlist the class for represent a {@code Card} list whit the card
+     * object.
+     */
     public void CardListLoader(CardList cardlist);
-    
-    
-    
+
 }
