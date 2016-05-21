@@ -58,6 +58,8 @@ public class DeckMakerController implements Initializable {
     Label deckQuantity;
     @FXML
     Label cardInDeck;
+    @FXML
+    Label validityResult;
    
     @FXML
     private ListView<String> cardListView;
@@ -252,6 +254,13 @@ public class DeckMakerController implements Initializable {
                 cardListView.getSelectionModel().clearSelection();
             }
         } 
+    }
+    
+    public void handleValidateAction(ActionEvent event){
+    
+        if(builder.minDeckQuantityValidate(deck, rules))
+            validityResult.setText("Deck is valid!");
+        else validityResult.setText("Not enought card in deck.");
     }
     
 }

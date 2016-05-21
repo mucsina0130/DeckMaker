@@ -59,5 +59,7 @@
       <Button fx:id="showcardbutton" layoutX="230.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleShowCard" prefHeight="25.0" prefWidth="140.0" text="Show Card" />
       <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: blue;" text="The list of the cards:" textFill="WHITE" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="380.0" layoutY="14.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: blue;" text="The list of the cards in deck:" textFill="WHITE" />
+      <Button fx:id="validate" layoutX="230.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleValidateAction" text="Validate" />
+      <Label fx:id="validityResult" layoutX="300.0" layoutY="326.0" prefHeight="25.0" prefWidth="70.0" textFill="WHITE" />
    </children>
 </AnchorPane>
