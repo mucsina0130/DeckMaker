@@ -1,9 +1,9 @@
-package hu.unideb.inf.maven.deckbuilder;
+package hu.unideb.inf.deckbuilder;
 
-import hu.unideb.inf.maven.deckmaker.Card;
-import hu.unideb.inf.maven.deckmaker.Deck;
-import hu.unideb.inf.maven.deckmaker.Restriction;
-import hu.unideb.inf.maven.deckmaker.ValidityRules;
+import hu.unideb.inf.deckmaker.Card;
+import hu.unideb.inf.deckmaker.Deck;
+import hu.unideb.inf.deckmaker.Restriction;
+import hu.unideb.inf.deckmaker.ValidityRules;
 
 /**
  *  This interface methods will build the {@code Deck} object from the {@code CardList} object.

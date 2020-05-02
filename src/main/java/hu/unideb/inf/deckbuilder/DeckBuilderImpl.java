@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.maven.deckbuilder;
+package hu.unideb.inf.deckbuilder;
 
-import hu.unideb.inf.maven.deckbuilder.DeckBuilder;
-import hu.unideb.inf.maven.deckmaker.Card;
-import hu.unideb.inf.maven.deckmaker.CardDAOImpl;
-import hu.unideb.inf.maven.deckmaker.Deck;
-import hu.unideb.inf.maven.deckmaker.Restriction;
-import hu.unideb.inf.maven.deckmaker.ValidityRules;
+import hu.unideb.inf.deckbuilder.DeckBuilder;
+import hu.unideb.inf.deckmaker.Card;
+import hu.unideb.inf.deckmaker.CardDAOImpl;
+import hu.unideb.inf.deckmaker.Deck;
+import hu.unideb.inf.deckmaker.Restriction;
+import hu.unideb.inf.deckmaker.ValidityRules;
+
 import java.util.stream.Collectors;
 import org.slf4j.LoggerFactory;
 

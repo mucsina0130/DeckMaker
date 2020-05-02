@@ -1,4 +1,4 @@
-package hu.unideb.inf.maven.deckmaker;
+package hu.unideb.inf.deckmaker;
 
 /**
  * This interface method will load data from an xml file.

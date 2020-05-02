@@ -1,18 +1,11 @@
-package hu.unideb.inf.maven.fxmlcontroller;
+package hu.unideb.inf.fxmlcontroller;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import hu.unideb.inf.maven.deckbuilder.DeckBuilderImpl;
-import hu.unideb.inf.maven.deckbuilder.DeckBuilder;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
-import hu.unideb.inf.maven.deckmaker.*;
-import hu.unideb.inf.maven.*;
+import hu.unideb.inf.deckbuilder.DeckBuilder;
+import hu.unideb.inf.deckbuilder.DeckBuilderImpl;
+import hu.unideb.inf.deckmaker.*;
 import java.io.IOException;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;

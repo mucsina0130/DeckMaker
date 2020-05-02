@@ -1,64 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: darkblue;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.maven.fxmlcontroller.DeckMakerController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #006ac3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.fxmlcontroller.DeckMakerController">
    <children>
       <ListView fx:id="cardListView" layoutX="20.0" layoutY="40.0" prefHeight="280.0" prefWidth="200.0" />
       <ListView fx:id="deckListView" layoutX="380.0" layoutY="40.0" prefHeight="280.0" prefWidth="200.0" />
       <Button fx:id="addbutton" layoutX="20.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleAddCardAction" prefHeight="25.0" prefWidth="200.0" text="Add Card to Deck" />
       <Button fx:id="removebutton" layoutX="380.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleRemoveCardAction" prefHeight="25.0" prefWidth="200.0" text="Remove Card from Deck" />
-      <Label fx:id="addCardResult" layoutX="20.0" layoutY="325.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: blue;" textFill="WHITE" />
-      <Label fx:id="removeCardResult" layoutX="380.0" layoutY="325.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: blue;" textFill="WHITE" />
-      <Label fx:id="cost" alignment="CENTER" layoutX="230.0" layoutY="100.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: blue;" text="Cost" textFill="WHITE">
+      <Label fx:id="addCardResult" layoutX="20.0" layoutY="325.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #007ac3;" textFill="WHITE" />
+      <Label fx:id="removeCardResult" layoutX="380.0" layoutY="325.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #007ac3;" textFill="WHITE" />
+      <Label fx:id="cost" alignment="CENTER" layoutX="230.0" layoutY="100.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: #007ac3;" text="Cost" textFill="WHITE">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label fx:id="name" alignment="CENTER" layoutX="230.0" layoutY="80.0" prefHeight="20.0" prefWidth="140.0" style="-fx-background-color: blue;" text="Name" textFill="WHITE">
+      <Label fx:id="name" alignment="CENTER" layoutX="230.0" layoutY="80.0" prefHeight="20.0" prefWidth="140.0" style="-fx-background-color: #007ac3;" text="Name" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="type" alignment="CENTER" layoutX="300.0" layoutY="120.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: #007ac3;" text="Type" textFill="WHITE">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label fx:id="type" alignment="CENTER" layoutX="300.0" layoutY="120.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: blue;" text="Type" textFill="WHITE">
+      <Label fx:id="cardType" alignment="CENTER" layoutX="230.0" layoutY="120.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: #007ac3;" text="CardType" textFill="WHITE">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label fx:id="cardType" alignment="CENTER" layoutX="230.0" layoutY="120.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: blue;" text="CardType" textFill="WHITE">
+      <Label fx:id="deffPower" alignment="CENTER" layoutX="300.0" layoutY="240.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: #007ac3;" text="DeffPower" textFill="WHITE">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label fx:id="deffPower" alignment="CENTER" layoutX="300.0" layoutY="240.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: blue;" text="DeffPower" textFill="WHITE">
+      <Label fx:id="attribute" alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: #007ac3;" text="Attribute" textFill="WHITE">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label fx:id="attribute" alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: blue;" text="Attribute" textFill="WHITE">
+      <Label fx:id="description" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="140.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #007ac3;" text="Description" textFill="WHITE" wrapText="true">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label fx:id="description" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="140.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: blue;" text="Description" textFill="WHITE" wrapText="true">
+      <Label fx:id="attPower" alignment="CENTER" layoutX="230.0" layoutY="240.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: #007ac3;" text="AttPower" textFill="WHITE">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label fx:id="attPower" alignment="CENTER" layoutX="230.0" layoutY="240.0" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: blue;" text="AttPower" textFill="WHITE">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </Label>
-      <Label fx:id="cardInDeck" layoutX="230.0" layoutY="260.0" prefHeight="20.0" prefWidth="140.0" style="-fx-background-color: blue;" text="Card in deck:" textFill="WHITE" />
-      <Label fx:id="deckQuantity" layoutX="230.0" layoutY="280.0" prefHeight="20.0" prefWidth="140.0" style="-fx-background-color: blue;" text="Deck Quantity: 0" textFill="WHITE" />
+      <Label fx:id="cardInDeck" layoutX="230.0" layoutY="260.0" prefHeight="20.0" prefWidth="140.0" style="-fx-background-color: #007ac3;" text="Card in deck:" textFill="WHITE" />
+      <Label fx:id="deckQuantity" layoutX="230.0" layoutY="280.0" prefHeight="20.0" prefWidth="140.0" style="-fx-background-color: #007ac3;" text="Deck Quantity: 0" textFill="WHITE" />
       <Button fx:id="showcardbutton" layoutX="230.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleShowCard" prefHeight="25.0" prefWidth="140.0" text="Show Card" />
-      <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: blue;" text="The list of the cards:" textFill="WHITE" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="380.0" layoutY="14.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: blue;" text="The list of the cards in deck:" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: #007ac3;" text="The list of the cards:" textFill="WHITE" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="380.0" layoutY="14.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: #007ac3;" text="The list of the cards in deck:" textFill="WHITE" />
       <Button fx:id="validate" layoutX="230.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleValidateAction" text="Validate" />
       <Label fx:id="validityResult" layoutX="300.0" layoutY="326.0" prefHeight="25.0" prefWidth="70.0" textFill="WHITE" />
    </children>

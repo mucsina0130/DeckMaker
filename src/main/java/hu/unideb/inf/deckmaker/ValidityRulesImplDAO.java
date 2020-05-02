@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.maven.deckmaker;
+package hu.unideb.inf.deckmaker;
 
 import java.io.File;
 import java.io.IOException;
