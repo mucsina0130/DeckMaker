@@ -28,7 +28,7 @@ public class ValidityRulesImplDAO implements ValidityRulesDAO{
     private static org.slf4j.Logger logger = LoggerFactory.getLogger(CardDAOImpl.class);
     
     @Override
-    public void RestrictionsLoader(ValidityRules rules) {
+    public void restrictionsLoader(ValidityRules rules) {
         try {
             logger.warn("ValidityRules.xml must not be null!");
             InputStream is = this.getClass().getClassLoader().getResourceAsStream("database/ValidityRules.xml");

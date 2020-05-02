@@ -73,8 +73,8 @@ public class DeckMakerController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         CardDAO cardLoader = new CardDAOImpl();
         ValidityRulesDAO validityLoader = new ValidityRulesImplDAO();
-        cardLoader.CardListLoader(list);
-        validityLoader.RestrictionsLoader(rules);
+        cardLoader.cardListLoader(list);
+        validityLoader.restrictionsLoader(rules);
         ObservableList<String> cardlistdata = FXCollections.observableArrayList();
         int i;
         name.setText("");

@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <rules>
-	<mindecksize>30</mindecksize>
-	<maxdecksize>60</maxdecksize>
-	<basic_quantity_restriction>3</basic_quantity_restriction>
+	<mindecksize>20</mindecksize>
+	<maxdecksize>30</maxdecksize>
+	<basic_quantity_restriction>4</basic_quantity_restriction>
 	<cardrestrictions>
 		<restriction>
-			<name>sd</name>
-			<maxnumber_of_piece>2</maxnumber_of_piece>
+			<name>Discrete Mathematics 1</name>
+			<maxnumber_of_piece>1</maxnumber_of_piece>
 		</restriction>
-        </cardrestrictions>
+		<restriction>
+			<name>Calculus 1</name>
+			<maxnumber_of_piece>1</maxnumber_of_piece>
+		</restriction>
+		<restriction>
+			<name>Logic in Computer Science</name>
+			<maxnumber_of_piece>1</maxnumber_of_piece>
+		</restriction>		
+		<restriction>
+			<name>Introduction to Informatics</name>
+			<maxnumber_of_piece>1</maxnumber_of_piece>
+		</restriction>		
+		<restriction>
+			<name>Computer Architectures</name>
+			<maxnumber_of_piece>1</maxnumber_of_piece>
+		</restriction>
+		
+    </cardrestrictions>
 
 </rules>

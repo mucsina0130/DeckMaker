@@ -8,24 +8,173 @@ and open the template in the editor.
 
 <cardlist>
 	<card>
-		<name>sd</name>
-		<cost>sd22</cost>
-		<attribute>asda</attribute>
-		<type>asdasd</type>
-		<cardtype>asdasssd</cardtype>
-		<description>sjgjghfdhdhj</description>
-		<attpower>22</attpower>
-		<deffpower>11</deffpower>
+		<name>PTI Student 1</name>
+		<cost>0</cost>
+		<attribute>Informatics</attribute>
+		<type>Student</type>
+		<cardtype>Personnel</cardtype>
+		<description>"A first year university student who do anything for a decree. Unfortunately the actual studying is an exception."</description>
+		<attpower>0</attpower>
+		<deffpower>1</deffpower>
 	</card>	
 	<card>
-		<name>ag</name>
-		<cost>afad34</cost>
-		<attribute>dssd</attribute>
-		<type>dfgafg</type>
-		<cardtype>adfgafg</cardtype>
-		<description>adgafga</description>
-		<attpower>111</attpower>
-		<deffpower>4444</deffpower>
+		<name>PTI Student 2</name>
+		<cost>1</cost>
+		<attribute>Informatics</attribute>
+		<type>Student</type>
+		<cardtype>Personnel</cardtype>
+		<description>"An university student who had exceptional sense for programing, but has difficulties with Maths."</description>
+		<attpower>1</attpower>
+		<deffpower>2</deffpower>
 	</card>	
-
+		<card>
+		<name>PTI Student 3</name>
+		<cost>2</cost>
+		<attribute>Informatics</attribute>
+		<type>Student</type>
+		<cardtype>Personnel</cardtype>
+		<description>"A third university student. Hopefully this is his last year."</description>
+		<attpower>2</attpower>
+		<deffpower>2</deffpower>
+	</card>	
+	<card>
+		<name>PTI Student 4</name>
+		<cost>2</cost>
+		<attribute>Informatics</attribute>
+		<type>Student</type>
+		<cardtype>Personnel</cardtype>
+		<description>"A third year university student for a second time. Not sure if it is the last..."</description>
+		<attpower>3</attpower>
+		<deffpower>3</deffpower>
+	</card>
+	<card>
+		<name>PTI Student 5</name>
+		<cost>3</cost>
+		<attribute>Informatics</attribute>
+		<type>Student</type>
+		<cardtype>Personnel</cardtype>
+		<description>"A brilliant third year university student. Only one step away from the diploma."</description>
+		<attpower>5</attpower>
+		<deffpower>5</deffpower>
+	</card>	
+		<card>
+		<name>Discrete Mathematics 1</name>
+		<cost>0</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Course</cardtype>
+		<description>The students needs to have 10 or more commutative power to complete this course</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>
+	<card>
+		<name>Calculus 1</name>
+		<cost>0</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Course</cardtype>
+		<description>The students needs to have 10 or more commutative power to complete this course</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>		
+	<card>
+		<name>Logic in Computer Science</name>
+		<cost>0</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Course</cardtype>
+		<description>The students needs to have 15 or more commutative power to complete this course</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>	
+	<card>
+		<name>Introduction to Informatics</name>
+		<cost>0</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Course</cardtype>
+		<description>The students needs to have 5 or more commutative power to complete this course</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>	
+	<card>
+		<name>Computer Architectures</name>
+		<cost>0</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Course</cardtype>
+		<description>The students needs to have 8 or more commutative power to complete this course</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>	
+	<card>
+		<name>Laptop</name>
+		<cost>3</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Aid</cardtype>
+		<description>Add 3 attack and 2 defense to the owner</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>
+	<card>
+		<name>Personal computer</name>
+		<cost>2</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Aid</cardtype>
+		<description>Add 1 attack and 2 defense to the owner</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>
+	<card>
+		<name>Coffee</name>
+		<cost>1</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Aid</cardtype>
+		<description>Add 2 attack to the owner for a turn but reduce it by 1 for the next two turn</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>
+	<card>
+		<name>Energy Drink</name>
+		<cost>1</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Aid</cardtype>
+		<description>Add 3 attack to the owner but reduce it to 0 for the next two turn</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>	
+	<card>
+		<name>Notes from a high grader</name>
+		<cost>1</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Aid</cardtype>
+		<description>Add 1 attack to the owner</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>
+	<card>
+		<name>Quick test</name>
+		<cost>1</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Challenges</cardtype>
+		<description>Every student whose defense is less than 2 cannot participate on the next turn</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>	
+	<card>
+		<name>The alarm doesn't work</name>
+		<cost>1</cost>
+		<attribute>N\A</attribute>
+		<type>N\A</type>
+		<cardtype>Challenges</cardtype>
+		<description>Every student whose defense is less than 3 cannot participate on the next turn</description>
+		<attpower>0</attpower>
+		<deffpower>0</deffpower>
+	</card>		
 </cardlist>

@@ -92,7 +92,7 @@ public class DeckBuilderImpl implements DeckBuilder{
         {
             quantity+=deck.getDeck().get(j).getQuantity();
         }
-        if(quantity+i>maxquantity.getMaxdecksize())
+        if(quantity+i>=maxquantity.getMaxdecksize())
         {
             logger.info("Too much card in the deck!");
             return false;

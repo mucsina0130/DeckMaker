@@ -12,5 +12,5 @@ public interface ValidityRulesDAO {
      * @param rules class for representing a list of the rules for building a
      * deck
      */
-    public void RestrictionsLoader(ValidityRules rules);
+    public void restrictionsLoader(ValidityRules rules);
 }

@@ -11,6 +11,6 @@ public interface CardDAO {
      * @param cardlist the class for represent a {@code Card} list whit the card
      * object.
      */
-    public void CardListLoader(CardList cardlist);
+    public void cardListLoader(CardList cardlist);
 
 }

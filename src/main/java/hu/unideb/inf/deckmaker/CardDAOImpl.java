@@ -29,7 +29,7 @@ public class CardDAOImpl implements CardDAO{
     private static org.slf4j.Logger logger = LoggerFactory.getLogger(CardDAOImpl.class);
 
     @Override
-    public void CardListLoader(CardList cardlist) {
+    public void cardListLoader(CardList cardlist) {
         try {
             logger.warn("ValidityRules.xml must not be null!");
             InputStream is = this.getClass().getClassLoader().getResourceAsStream("database/CardList.xml");
