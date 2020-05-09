@@ -90,7 +90,7 @@
 
 	<build>
 		<testSourceDirectory>
-            ${basedir}/src/test/java/hu/unideb/inf/maven/deckmaker
+            ${basedir}/src/test/java/hu/unideb/inf/deckmaker
         </testSourceDirectory>
 		<plugins>
 			<plugin>

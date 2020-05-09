@@ -87,12 +87,8 @@ public class DeckBuilderImpl implements DeckBuilder{
 
     @Override
     public boolean maxDeckQuantityValidate(Deck<Card> deck, ValidityRules<Restriction> maxquantity, int i) {
-        int quantity=0;
-        for(int j=0;j<deck.getDeck().size();j++)
-        {
-            quantity+=deck.getDeck().get(j).getQuantity();
-        }
-        if(quantity+i>=maxquantity.getMaxdecksize())
+
+        if(deck.getDeckquantity()+i>maxquantity.getMaxdecksize())
         {
             logger.info("Too much card in the deck!");
             return false;
